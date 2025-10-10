@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chazzz</title>
     <link rel="stylesheet" href="src/styles/style.css">
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+
     <script defer type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script defer nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
 </head>
@@ -55,23 +61,25 @@
             </div>
         </div>
     </div>
-    <div class="collage-container">
-        <div class="content-wrapper content-container">
-            <p>Fotocollage placeholder</p>
-            <div class="collage-image">
-                <img src="" alt="">
-            </div>
-            <div class="collage-image">
-                <img src="" alt="">
-            </div>
-            <div class="collage-image">
-                <img src="" alt="">
-            </div>
-            <div class="collage-image">
-                <img src="" alt="">
+    <section class="carousel-container">
+        <div class="image-collage content-container">
+            <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Jerk Chicken">
+            <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Empanadas">
+            <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Caribbean Bowl">
+            <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Plantains">
+        </div>
+        <div class="splide content-wrapper content-container mobile-carousel">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
+
+                </ul>
             </div>
         </div>
-    </div>
+    </section>
     <div class="menukaarten-container">
         <div class="content-container">
             <span>Bekijk onze</span>
@@ -116,5 +124,18 @@
             </div>
         </footer>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('.splide', {
+            type   : 'loop',
+            autoplay: true,
+            interval: 3000,
+            arrows: false,
+            pauseOnHover: true,
+            pagination: true,
+            speed: 500,
+            }).mount();
+        });
+    </script>
 </body>
 </html>
