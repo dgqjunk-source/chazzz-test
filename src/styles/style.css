@@ -2,15 +2,16 @@
     --grid-max-width: 72.5rem;
     --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem));
     --grid-columns: 12;
-    --step--2: clamp(0.68rem, 0.8227rem + -0.1841vw, 0.7813rem);
-    --step--1: clamp(0.85rem, 0.9733rem + -0.1591vw, 0.9375rem);
-    --step-0: clamp(1.0625rem, 1.1506rem + -0.1136vw, 1.125rem);
-    --step-1: clamp(1.3281rem, 1.3589rem + -0.0398vw, 1.35rem);
-    --step-2: clamp(1.62rem, 1.6036rem + 0.073vw, 1.6602rem);
-    --step-3: clamp(1.944rem, 1.8903rem + 0.2385vw, 2.0752rem);
-    --step-4: clamp(2.3328rem, 2.2259rem + 0.4749vw, 2.594rem);
-    --step-5: clamp(2.7994rem, 2.6181rem + 0.8057vw, 3.2425rem);
+    --step--2: clamp(0.6944rem, 0.684rem + 0.0465vw, 0.72rem);
+    --step--1: clamp(0.8333rem, 0.8061rem + 0.1212vw, 0.9rem);
+    --step-0: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+    --step-1: clamp(1.2rem, 1.1156rem + 0.375vw, 1.4063rem);
+    --step-2: clamp(1.44rem, 1.31rem + 0.5778vw, 1.7578rem);
+    --step-3: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
+    --step-4: clamp(2.0736rem, 1.7983rem + 1.2236vw, 2.7466rem);
+    --step-5: clamp(2.4883rem, 2.1018rem + 1.718vw, 3.4332rem);
 }
+
 
 /* Andy Bell's CSS Reset */
 /* Box sizing rules */
@@ -99,27 +100,118 @@ h2 {
     font-size: var(--step-3);
 }
 
-.page-container {
+.content-container {
     max-width: var(--grid-max-width);
     padding-inline: var(--grid-gutter);
     margin-inline: auto;
 }
 
+@media (max-width: 768px) {
+    .navbar-content ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .navbar-container {
-    display: grid;
-    gap: var(--grid-gutter);
-    justify-items: center;
-    background: #403a3a;
+    height: 10vh;
+    width: 100%;
     color: white;
 }
 
+.navbar-content {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    align-items: center; /* vertically center both */
+    max-width: var(--grid-max-width);
+    margin-inline: auto;
+    padding-inline: var(--grid-gutter);
+}
+
+/* Make sure the logo doesn’t have weird margins */
+.logo-container h1 {
+    margin: 0;
+    line-height: 1;
+}
+
+/* Page links */
 .pages-container > ul {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     gap: 2rem;
-    list-style-type:  none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .pages-container > ul a {
     text-decoration: none;
+    font-size: var(--step-0);
+    color: inherit;
+}
+
+
+.hero-container {
+    background-image: url("https://scontent.cdninstagram.com/v/t51.75761-15/483297943_17853859911403466_7494858891760167583_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=MzU4NDQ3OTIxMDA4MDgxOTg1MA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNTB4MTY4OC5zZHIuQzMifQ%3D%3D&_nc_ohc=DlbsAewrMvMQ7kNvwGHUy57&_nc_oc=AdmCq9duHUvfxeiY0UvoXexPVpqXYPQaZUpRALIQYgwEQNd4juSg61YNsIefzeX1JVs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=4Bl5DkCeNfxp7wbDS-nfEw&oh=00_Afcy5MXODGF1v8sDutgl-aNUDOaFoFU0yqH8bXOcIjQKqw&oe=68EF36DF");
+    box-shadow: 0 120px 200px rgba(0,0,0,0.9) inset;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    height: 85vh;
+    display: grid;
+    gap: var(--grid-gutter);
+    color: white;
+    text-shadow: #090909 3px 0 10px;
+}
+
+.hero-container p {
+    font-size: var(--step-0);
+}
+
+.about-us-section {
+    margin: var(--grid-gutter) auto 20vh auto;
+    max-height: 70vh;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: var(--grid-gutter);
+}
+
+.about-content p {
+    font-size: var(--step-0);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-rows: repeat(4, 100%);
+        grid-template-columns: 100%;
+        
+    }
+
+    .about-content > .image-container {
+        grid-auto-flow:row;
+    }
+
+    /* .image-container img {
+        display: none;
+    } */
+}
+
+.about-content > .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    gap: 0.25rem;
+}
+
+.image-container > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
