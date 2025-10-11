@@ -18,6 +18,7 @@
 *,
 *::before,
 *::after {
+    font-family: 'Jost', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -186,6 +187,97 @@ h2 {
     line-height: 1.5;
 }
 
+.about-content > .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    gap: 0.25rem;
+}
+
+.image-container > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-container {
+    height: 70vh;
+    background: linear-gradient(#181818, #251a2e);
+}
+
+.image-collage {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.image-collage img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.mobile-carousel {
+    display: none;
+}
+
+.menukaarten-container span {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: gold;
+    font-size: var(--step--1);
+}
+
+.menukaarten-container h2 {
+    margin: 0;
+}
+
+.kaarten-header {
+    height: max-content;
+}
+
+.menukaarten-container {
+    margin: 3rem auto;
+    height: 80vh;
+    display: grid;
+    grid-auto-rows: 1fr 9fr;
+}
+
+.menu-kaart {
+    margin-top: 2rem;
+    border-radius: 10px;
+    background:#f9fbfc;
+    height: max-content;
+    width: clamp(40%, 50% + 1.75vw, 60%);
+    padding: 1rem;
+    display: grid;
+    align-items: stretch;
+    grid-auto-rows: 5fr 1fr 1fr;
+    box-shadow: 10px 10px 40px 3px rgba(0, 0, 0, 0.1);
+}
+
+.menu-kaart img {
+    border-radius: 12px;
+    width: 100%;
+    height: 40vh;
+    display: inline;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.menu-kaart a {
+    align-self: end;
+}
+
+.menukaarten {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(0.5rem, 1.25rem + 0.775vw, 2rem);
+}
+
 @media (max-width: 678px) {
     .hero-container {
         background-attachment: scroll;
@@ -217,60 +309,140 @@ h2 {
         display: none !important;
     }
 
+    .carousel-container {
+        height: max-content;
+    }
+
     .mobile-carousel {
         display: flex !important;
         align-items: center;
-        height: 100%;
-        max-width: 100%;
-    }
-    
-    .mobile-carousel img {
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .splide {
-        margin: 5rem auto;
-        border-radius: 1rem;
+        padding: 1rem;
+        width: 100vw;
+        height: 70vh;
+        margin-left: calc(50% - 50vw);
         overflow: hidden;
+        border-radius: 0;
+    }
+
+    .splide__slide {
+        width: 100%;
+        height: 100%;
+    }
+
+    .splide__slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .menukaarten-container {
+        width: 100%;
+        height: max-content;
+    }
+
+    .menukaarten {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .menu-kaart {
+        width: 100%;
+    }
+
+    footer.footer-container > .footer-content {
+        display: flex !important;        /* ensure flex is applied */
+        flex-direction: column !important; /* stack vertically */
+        align-items: center !important;    /* center horizontally */
+        justify-content: center !important;
+        gap: 2rem !important;
+    }
+
+    /* Center each inner section */
+    footer .contact-content,
+    footer .openingstijden-content,
+    footer .chazzz-logo {
+        text-align: center;
+        margin: 0 auto; /* ensure centered in flex container */
+    }
+
+    /* Stack social icons horizontally */
+    footer .contact-content ul {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        padding: 0;
+        margin: 0.5rem 0 0 0;
+    }
+
+    /* Make opening hours list vertical */
+    footer .openingstijden-content ul {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0;
+        list-style: none;
     }
 }
 
-.about-content > .image-container {
+footer.footer-container {
+    background: #181818;
+    color: white;
+}
+
+.contact-content h3 {
+    margin-top: 2rem;
+}
+
+footer.footer-container > .footer-content {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 50%);
-    gap: 0.25rem;
-}
-
-.image-container > img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.carousel-container {
-    height: 75vh;
-    background: #201f1f;
-}
-
-.carousel-container > .content-wrapper {
-    width: 80%;
-    height: 100%;
-}
-
-.content-wrapper img {
-    padding: 0.3rem;
-}
-
-.mobile-carousel {
-    display: none;
-}
-
-.image-collage {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4fr 1fr;
     align-items: center;
-    gap: 0.5rem;
+    justify-items: center;
+}
+
+.chazzz-logo-img {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    align-self: center;
+    margin-left: 2rem;
+}
+
+.credits {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.contact-content span {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contact-content ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-content li a {
+    font-size: var(--step-2);
+    margin: 1rem;
+}
+
+.openingstijden-content {
+    grid-column: 3;
+}
+
+.footer-content > .openingstijden-content ul {
+    list-style: none;
+    margin: 1rem auto auto auto;
+    padding: 0;
+    gap: 1rem;
+}
+
+.credits p:last-child {
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.25)
 }

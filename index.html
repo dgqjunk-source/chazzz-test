@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="src/styles/style.css">
     <!-- Splide CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
-
     <!-- Splide JS -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script defer nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
 </head>
@@ -68,61 +69,67 @@
             <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Caribbean Bowl">
             <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Plantains">
         </div>
-        <div class="splide content-wrapper content-container mobile-carousel">
+        <div class="splide content-wrapper mobile-carousel">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
                     <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
                     <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
                     <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
-
                 </ul>
             </div>
         </div>
     </section>
     <div class="menukaarten-container">
-        <div class="content-container">
+        <div class="kaarten-header content-container">
             <span>Bekijk onze</span>
             <h2>Menukaarten</h2>
         </div>
-        <div class="content-container">
+        <div class="menukaarten content-container">
             <div class="menu-kaart">
+                <img src="https://www.islandlifeguides.com/wp-content/uploads/2024/04/Ropa-Vieja-1.jpg.webp" alt="">
                 <h3>Menukaart</h3>
                 <a href="#">Lees meer</a>
             </div>
             <div class="menu-kaart">
+                <img src="https://www.simplotfoods.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F0dkgxhks0leg%2FAiydcIt6edim5A24J7516%2F8490933042267d9cc535609b5d9bbb3d%2FTF_cold_20mango_20coffee_141.jpg%3Ffm%3Dwebp&w=1080&q=75" alt="">
                 <h3>Drankkaart</h3>
                 <a href="#">Lees meer</a>
             </div>
         </div>
     </div>
-    <div class="footer-container">
-        <footer>
-            <div class="footer-content">
-                <div class="contact-content content-container">
-                    <h3>CHAZZZ FOOD</h3>
-                    <span>Nijmegen:</span>
-                    <p class="address">Waalkade 65<br/>6511 XP Nijmegen</p>
-                    <p class="phone-number"><a href="tel:+31622314991">06 22314991</a></p>
-                    <ul class="social-menu">
-                        <li><a href="https://instagram.com/chazzz_food_nijmegen"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                        <li><a href="https://www.facebook.com/Chazzzfood/"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    </ul>
-                </div>
-                <div class="chazzz-logo content-container">
-                    <p>Logo</p>
-                </div>
-                <div class="openingstijden-content content-container">
-                    <ul>
-                        <li>Woensdag: 16:00 – 22:00</li>
-                        <li>Donderdag: 16:00 – 22:00</li>
-                        <li>Vrijdag: 16:00 – 22:00</li>
-                        <li>Zaterdag: 16:00 – 22:00</li>
-                        <li>Zondag: 16:00 – 22:00</li>
-                    </ul>
-                </div>
+    <footer class="footer-container">
+        <div class="footer-content content-container">
+            <div class="chazzz-logo-img">
+                <img src="assets/chazzzz.png" alt="Chazzz logo">
             </div>
-        </footer>
+            <div class="contact-content content-container">
+                <h3>CHAZZZ FOOD</h3>
+                <span>Locaties/contact</span>
+                <p class="address">Nijmegen: <br> Waalkade 65<br/>6511 XP Nijmegen</p>
+                <p class="address">Arnhem: <br> Momenteel niet beschikbaar</p>
+                <p class="phone-number">Telefoonnummer: <br><a href="tel:+31622314991">06 22314991</a></p>
+                <ul class="social-menu">
+                    <li><a href="https://instagram.com/chazzz_food_nijmegen"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="https://www.facebook.com/Chazzzfood/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                </ul>
+            </div>
+            <div class="openingstijden-content content-container">
+                <h3>Openingstijden</h3>
+                <ul>
+                    <li>Woensdag: 16:00 – 22:00</li>
+                    <li>Donderdag: 16:00 – 22:00</li>
+                    <li>Vrijdag: 16:00 – 22:00</li>
+                    <li>Zaterdag: 16:00 – 22:00</li>
+                    <li>Zondag: 16:00 – 22:00</li>
+                </ul>
+            </div>
+            <div class="credits content-container">
+                <p>Chazzz Food</p>
+                <p>made by Devon</p>
+            </div>
+        </div>
+    </footer>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
