@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chazzz</title>
+    <meta name="description" content="Chazzz Food - Tasty Caribbean & Latin food in Arnhem and Nijmegen. Discover our menu, opening hours, and locations.">
+    <meta property="og:title" content="Chazzz Food">
+    <meta property="og:description" content="Tasty Caribbean & Latin food in Arnhem and Nijmegen.">
+    <meta property="og:image" content="assets/chazzzz.png">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="src/styles/style.css">
     <!-- Splide CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
@@ -11,13 +17,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script defer type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script defer nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <div class="hero-container">
-        <div class="navbar-container">
+        <header class="navbar-container">
             <div class="content-container navbar-content">
                 <div class="logo-container">
                     <h1>Chazzz</h1>
@@ -32,72 +38,73 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </header>
         <div class="hero-content-wrapper">
-            <img src="" alt="">
             <div class="hero-content content-container">
                 <h2>Het lekkerste caribische eten bij Chazzz</h2>
                 <p>TASTY CARIBBEAN & LATIN FOOD</p>
             </div>
         </div>
     </div>
-    <div class="about-us-section">
-        <div class="content-container about-content">
-            <div class="text-container">
-                <h2>Over ons</h2>
-                <p>Welkom bij Chazzz Food – <b>de smaak van het Caribisch gebied in Arnhem en Nijmegen!</b><br><br>
-                Bij Chazzz Food proef je de zon, het ritme en de rijke smaken van de Caribische en Latijns-Amerikaanse keuken. Onze gerechten worden met liefde bereid, met verse ingrediënten, authentieke kruiden en een moderne twist.<br><br>
+    <main>
+        <section class="about-us-section">
+            <div class="content-container about-content">
+                <div class="text-container">
+                    <h2>Over ons</h2>
+                    <p>Welkom bij Chazzz Food – <b>de smaak van het Caribisch gebied in Arnhem en Nijmegen!</b><br><br>
+                    Bij Chazzz Food proef je de zon, het ritme en de rijke smaken van de Caribische en Latijns-Amerikaanse keuken. Onze gerechten worden met liefde bereid, met verse ingrediënten, authentieke kruiden en een moderne twist.<br><br>
 
-                Of je nu langskomt voor een snelle lunch, een gezellige avond met vrienden of een uitgebreid diner, bij Chazzz voel je je meteen thuis. Onze menukaart staat vol met klassiekers zoals jerk chicken, empanadas en onze beroemde Caribbean bowls – allemaal huisgemaakt en vol smaak. <br><br>
+                    Of je nu langskomt voor een snelle lunch, een gezellige avond met vrienden of een uitgebreid diner, bij Chazzz voel je je meteen thuis. Onze menukaart staat vol met klassiekers zoals jerk chicken, empanadas en onze beroemde Caribbean bowls – allemaal huisgemaakt en vol smaak. <br><br>
 
-                Als klein familiebedrijf hechten wij veel waarde aan kwaliteit, gastvrijheid en een warme sfeer. Je vindt ons aan de Waalkade in Nijmegen en binnenkort ook in Arnhem. Kom langs, proef onze gerechten en ervaar zelf waarom Chazzz Food dé plek is voor liefhebbers van Caribisch eten in Gelderland.
-                <br><br>
-                <b>Chazzz Food – Tasty Caribbean & Latin Food.</b></p>
+                    Als klein familiebedrijf hechten wij veel waarde aan kwaliteit, gastvrijheid en een warme sfeer. Je vindt ons aan de Waalkade in Nijmegen en binnenkort ook in Arnhem. Kom langs, proef onze gerechten en ervaar zelf waarom Chazzz Food dé plek is voor liefhebbers van Caribisch eten in Gelderland.
+                    <br><br>
+                    <b>Chazzz Food – Tasty Caribbean & Latin Food.</b></p>
+                </div>
+                <div class="image-container">
+                    <img loading="lazy" src="/assets/about-us-image.jpg" alt="Man in kitchen preparing caribbean food">
+                    <img loading="lazy" src="/assets/empanadas.jpg" alt="Man in kitchen preparing caribbean food">
+                    <img loading="lazy" src="/assets/sate-ku-batata.jpg" alt="Man in kitchen preparing caribbean food">
+                    <img loading="lazy" src="/assets/willemstad.jpg" alt="Man in kitchen preparing caribbean food">
+                </div>
             </div>
-            <div class="image-container">
-                <img src="/assets/about-us-image.jpg" alt="Man in kitchen preparing caribbean food">
-                <img src="/assets/empanadas.jpg" alt="Man in kitchen preparing caribbean food">
-                <img src="/assets/sate-ku-batata.jpg" alt="Man in kitchen preparing caribbean food">
-                <img src="/assets/willemstad.jpg" alt="Man in kitchen preparing caribbean food">
+        </section>
+        <section class="carousel-container">
+            <div class="image-collage content-container">
+                <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Jerk Chicken">
+                <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Empanadas">
+                <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Caribbean Bowl">
+                <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Plantains">
             </div>
-        </div>
-    </div>
-    <section class="carousel-container">
-        <div class="image-collage content-container">
-            <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Jerk Chicken">
-            <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Empanadas">
-            <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Caribbean Bowl">
-            <img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Plantains">
-        </div>
-        <div class="splide content-wrapper mobile-carousel">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt=""></li>
-                </ul>
+            <div class="splide content-wrapper mobile-carousel">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Placeholder"></li>
+                        <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Placeholder"></li>
+                        <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Placeholder"></li>
+                        <li class="splide__slide"><img src="https://media.tarkett-image.com/large/TH_25094221_25187221_001.jpg" alt="Placeholder"></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-    <div class="menukaarten-container">
-        <div class="kaarten-header content-container">
-            <span>Bekijk onze</span>
-            <h2>Menukaarten</h2>
-        </div>
-        <div class="menukaarten content-container">
-            <div class="menu-kaart">
-                <img src="https://www.islandlifeguides.com/wp-content/uploads/2024/04/Ropa-Vieja-1.jpg.webp" alt="">
-                <h3>Menukaart</h3>
-                <a href="#">Lees meer</a>
+        </section>
+        <section class="menukaarten-container">
+            <div class="kaarten-header content-container">
+                <span>Bekijk onze</span>
+                <h2>Menukaarten</h2>
             </div>
-            <div class="menu-kaart">
-                <img src="https://www.simplotfoods.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F0dkgxhks0leg%2FAiydcIt6edim5A24J7516%2F8490933042267d9cc535609b5d9bbb3d%2FTF_cold_20mango_20coffee_141.jpg%3Ffm%3Dwebp&w=1080&q=75" alt="">
-                <h3>Drankkaart</h3>
-                <a href="#">Lees meer</a>
+            <div class="menukaarten content-container">
+                <div class="menu-kaart">
+                    <img src="https://www.islandlifeguides.com/wp-content/uploads/2024/04/Ropa-Vieja-1.jpg.webp" alt="Picture showing a caribbean dish">
+                    <h3>Menukaart</h3>
+                    <a href="#">Lees meer</a>
+                </div>
+                <div class="menu-kaart">
+                    <img src="https://www.simplotfoods.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F0dkgxhks0leg%2FAiydcIt6edim5A24J7516%2F8490933042267d9cc535609b5d9bbb3d%2FTF_cold_20mango_20coffee_141.jpg%3Ffm%3Dwebp&w=1080&q=75" alt="Two cocktails on a table">
+                    <h3>Drankkaart</h3>
+                    <a href="#">Lees meer</a>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <footer class="footer-container">
         <div class="footer-content content-container">
             <div class="chazzz-logo-img">
@@ -110,8 +117,8 @@
                 <p class="address">Arnhem: <br> Momenteel niet beschikbaar</p>
                 <p class="phone-number">Telefoonnummer: <br><a href="tel:+31622314991">06 22314991</a></p>
                 <ul class="social-menu">
-                    <li><a href="https://instagram.com/chazzz_food_nijmegen"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                    <li><a href="https://www.facebook.com/Chazzzfood/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="https://instagram.com/chazzz_food_nijmegen" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="https://www.facebook.com/Chazzzfood/" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
                 </ul>
             </div>
             <div class="openingstijden-content content-container">
