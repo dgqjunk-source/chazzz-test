@@ -4,128 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chazzz</title>
+    <!-- Meta tags -->
     <meta name="description" content="Chazzz Food - Tasty Caribbean & Latin food in Arnhem and Nijmegen. Discover our menu, opening hours, and locations.">
+    <meta name="robots" content="index, follow">
     <meta property="og:title" content="Chazzz Food">
     <meta property="og:description" content="Tasty Caribbean & Latin food in Arnhem and Nijmegen.">
     <meta property="og:image" content="assets/chazzzz.png">
     <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="src/styles/style.css">
-    <!-- Splide CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
+    <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
     </noscript>
-    <link rel="preload" as="image" href="https://scontent.cdninstagram.com/v/t51.75761-15/483297943_17853859911403466_7494858891760167583_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=MzU4NDQ3OTIxMDA4MDgxOTg1MA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNTB4MTY4OC5zZHIuQzMifQ%3D%3D&_nc_ohc=DlbsAewrMvMQ7kNvwGHUy57&_nc_oc=AdmCq9duHUvfxeiY0UvoXexPVpqXYPQaZUpRALIQYgwEQNd4juSg61YNsIefzeX1JVs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=4Bl5DkCeNfxp7wbDS-nfEw&oh=00_Afcy5MXODGF1v8sDutgl-aNUDOaFoFU0yqH8bXOcIjQKqw&oe=68EF36DF" fetchpriority="high";
-">
-    <script rel="preload" defer type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
-    <script rel="preload" refer nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
+    <!-- Preload Hero Image for faster LCP -->
+    <link
+        rel="preload"
+        as="image"
+        fetchpriority="high"
+        href="https://scontent.cdninstagram.com/v/t51.75761-15/483297943_17853859911403466_7494858891760167583_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=MzU4NDQ3OTIxMDA4MDgxOTg1MA==.3-ccb1-7&_nc_sid=58cdad&_nc_ohc=DlbsAewrMvMQ7kNvwGHUy57&_nc_ht=scontent.cdninstagram.com&oh=00_Afcy5MXODGF1v8sDutgl-aNUDOaFoFU0yqH8bXOcIjQKqw&oe=68EF36DF"
+    >
+
+    
+
+    <!-- Ionicons (optimized loading) -->
+    <script type="module" defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <style>
-        :root {
-            --grid-max-width: 72.5rem;
-            --grid-gutter: clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem);
-            --step-0: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
-            --step-3: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
-            --step-5: clamp(2.4883rem, 2.1018rem + 1.718vw, 3.4332rem);
-        }
+    :root {
+        --grid-max-width: 72.5rem;
+        --grid-gutter: clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem);
+        --step-0: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+        --step-3: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
+        --step-5: clamp(2.4883rem, 2.1018rem + 1.718vw, 3.4332rem);
+    }
 
-        /* Basic reset for fast render */
-        *, *::before, *::after {
-            font-family: 'Jost', sans-serif;
-            box-sizing: border-box;
-        }
+    /* Basic reset for fast render */
+    *, *::before, *::after {
+        font-family: 'Jost', sans-serif;
+        box-sizing: border-box;
+    }
 
-        body, h1, h2, p, ul {
-            margin: 0;
-            padding: 0;
-        }
+    body, h1, h2, p, ul {
+        margin: 0;
+        padding: 0;
+    }
 
-        body {
-            min-height: 100vh;
-            line-height: 1.5;
-            margin: 0;
-            padding: 0;
-            color: white;
-            background: #000;
-        }
+    body {
+        min-height: 100vh;
+        line-height: 1.5;
+        background-color: #fff;
+        color: #111;
+    }
 
-        img {
-            display: block;
-            max-width: 100%;
-        }
+    img {
+        display: block;
+        max-width: 100%;
+    }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-        /* Navbar (critical) */
-        .navbar-container {
-            height: 10vh;
-            width: 100%;
-            color: white;
-        }
+    /* CONTAINER UTILITY */
+    .content-container {
+        max-width: var(--grid-max-width);
+        padding-inline: var(--grid-gutter);
+        margin-inline: auto;
+    }
 
-        .navbar-content {
-            height: 10vh;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: var(--grid-max-width);
-            margin-inline: auto;
-            padding-inline: var(--grid-gutter);
-        }
+    /* BASIC SECTION SPACING (for stability before full CSS loads) */
+    section {
+        margin-block: 5vh;
+    }
 
-        .logo-container h1 {
-            font-size: var(--step-3);
-            margin: 0;
-            line-height: 1;
-        }
+    /* NAVBAR */
+    .navbar-container {
+        height: 10vh;
+        width: 100%;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
 
-        .pages-container > ul {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            list-style: none;
-        }
+    .navbar-content {
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: var(--grid-max-width);
+        margin-inline: auto;
+        padding-inline: var(--grid-gutter);
+    }
 
-        .pages-container > ul a {
-            font-size: var(--step-0);
-        }
+    .logo-container h1 {
+        font-size: var(--step-3);
+        margin: 0;
+        line-height: 1;
+    }
 
-        /* Hero section (critical) */
+    .pages-container > ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .pages-container > ul a {
+        font-size: var(--step-0);
+    }
+
+    /* HERO SECTION */
+    .hero-container {
+        background-image: url("https://scontent.cdninstagram.com/v/t51.75761-15/483297943_17853859911403466_7494858891760167583_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=MzU4NDQ3OTIxMDA4MDgxOTg1MA==.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEzNTB4MTY4OC5zZHIuQzMifQ==&_nc_ohc=DlbsAewrMvMQ7kNvwGHUy57&_nc_oc=AdmCq9duHUvfxeiY0UvoXexPVpqXYPQaZUpRALIQYgwEQNd4juSg61YNsIefzeX1JVs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=4Bl5DkCeNfxp7wbDS-nfEw&oh=00_Afcy5MXODGF1v8sDutgl-aNUDOaFoFU0yqH8bXOcIjQKqw&oe=68EF36DF");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 85vh;
+
+        display: grid;
+        align-items: center;
+        color: white;
+        text-shadow: 0 0 10px rgba(0,0,0,0.8);
+        box-shadow: 0 120px 200px rgba(0,0,0,0.9) inset;
+    }
+
+    .hero-container p {
+        font-size: var(--step-0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 678px) {
         .hero-container {
-            background-image: url("https://scontent.cdninstagram.com/v/t51.75761-15/483297943_17853859911403466_7494858891760167583_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ig_cache_key=MzU4NDQ3OTIxMDA4MDgxOTg1MA%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&_nc_ohc=DlbsAewrMvMQ7kNvwGHUy57&_nc_oc=AdmCq9duHUvfxeiY0UvoXexPVpqXYPQaZUpRALIQYgwEQNd4juSg61YNsIefzeX1JVs&_nc_ht=scontent.cdninstagram.com&oh=00_Afcy5MXODGF1v8sDutgl-aNUDOaFoFU0yqH8bXOcIjQKqw&oe=68EF36DF");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            height: 85vh;
-            display: grid;
-            place-items: center;
-            color: white;
-            text-shadow: 0 0 10px rgba(0,0,0,0.8);
-            box-shadow: 0 120px 200px rgba(0,0,0,0.9) inset;
-        }
-
-        .hero-container p {
-            font-size: var(--step-0);
-        }
-
-        /* Responsive tweaks */
-        @media (max-width: 678px) {
-            .hero-container {
             background-attachment: scroll;
             box-shadow: 0 60px 100px rgba(0,0,0,0.7) inset;
-            }
-
-            .navbar-content ul {
-            flex-direction: column;
-            }
         }
+
+        .navbar-content ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        section {
+            margin-block: 3vh;
+        }
+    }
 </style>
 </head>
 <body>
@@ -244,38 +279,19 @@
             </div>
         </div>
     </footer>
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            if (window.innerWidth < 678) {
-            // Dynamically load Splide only for mobile
-            const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js';
-            script.onload = () => {
-                new Splide('.splide', {
-                type: 'loop',
-                autoplay: true,
-                interval: 3000,
-                arrows: false,
-                pauseOnHover: true,
-                pagination: true,
-                speed: 500,
-                }).mount();
-            };
-            document.body.appendChild(script);
-            } else {
-            // Desktop: only initialize if Splide is already loaded
-            if (window.Splide) {
-                new Splide('.splide', {
-                type: 'loop',
-                autoplay: true,
-                interval: 3000,
-                arrows: false,
-                pauseOnHover: true,
-                pagination: true,
-                speed: 500,
-                }).mount();
-            }
-            }
+        document.addEventListener('DOMContentLoaded', () => {
+        new Splide('.splide', {
+            type: 'loop',
+            autoplay: true,
+            interval: 3000,
+            arrows: false,
+            pauseOnHover: true,
+            pagination: true,
+            speed: 500,
+        }).mount();
         });
     </script>
 </body>

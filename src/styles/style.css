@@ -177,6 +177,10 @@ h2 {
     gap: var(--grid-gutter);
 }
 
+.about-content h2 {
+    margin-bottom: 2rem;
+}
+
 .text-container {
     height: max-content
 }
@@ -270,6 +274,7 @@ h2 {
 
 .menu-kaart a {
     align-self: end;
+    text-decoration: underline;
 }
 
 .menukaarten {
@@ -445,4 +450,24 @@ footer.footer-container > .footer-content {
 .credits p:last-child {
     margin-top: 0;
     color: rgba(255, 255, 255, 0.25)
+}
+
+.footer-content > div {
+    margin-bottom: 2rem; /* space between footer sections */
+}
+
+.footer-content h3 {
+    margin-bottom: 0.75rem; /* space after each heading */
+}
+
+.footer-content p,
+.footer-content span,
+.footer-content a {
+    margin-bottom: 0.5rem; /* space after text lines and links */
+}
+
+.footer-content ul {
+    margin: 0.5rem 0; /* space before/after lists */
+    padding: 0;
+    list-style: none;
 }
