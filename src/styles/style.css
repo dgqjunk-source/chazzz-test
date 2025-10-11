@@ -18,7 +18,7 @@
 *,
 *::before,
 *::after {
-    font-family: 'Jost', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Jost', sans-serif;
     box-sizing: border-box;
 }
 
