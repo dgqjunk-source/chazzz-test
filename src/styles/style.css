@@ -24,6 +24,7 @@
 
 /* Prevent font size inflation */
 html {
+    scroll-behavior: smooth;
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
@@ -445,6 +446,10 @@ footer.footer-container > .footer-content {
     margin: 1rem auto auto auto;
     padding: 0;
     gap: 1rem;
+}
+
+.credits p {
+    text-align: center;
 }
 
 .credits p:last-child {

@@ -1,0 +1,301 @@
+/* ===============================
+   RESET & BASE
+   =============================== */
+
+/* Box sizing and font */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+/* Prevent font size inflation on mobile */
+html {
+    scroll-behavior: smooth;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Reset margins for main elements */
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on semantic lists */
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Core body defaults */
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.5;
+    color: #111;
+    background-color: #fff;
+}
+
+/* Headings & interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
+/* Links */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Images & media */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Forms */
+input, button, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anchored targets */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* ===============================
+   VARIABLES
+   =============================== */
+:root {
+    --grid-max-width: 72.5rem;
+    --grid-gutter: clamp(1.125rem, 0.5625rem + 2.5vw, 2.5rem);
+    --step--2: clamp(0.6944rem, 0.684rem + 0.0465vw, 0.72rem);
+    --step--1: clamp(0.8333rem, 0.8061rem + 0.1212vw, 0.9rem);
+    --step-0: clamp(1rem, 0.9489rem + 0.2273vw, 1.125rem);
+    --step-1: clamp(1.2rem, 1.1156rem + 0.375vw, 1.4063rem);
+    --step-2: clamp(1.44rem, 1.31rem + 0.5778vw, 1.7578rem);
+    --step-3: clamp(1.728rem, 1.536rem + 0.8532vw, 2.1973rem);
+    --step-4: clamp(2.0736rem, 1.7983rem + 1.2236vw, 2.7466rem);
+    --step-5: clamp(2.4883rem, 2.1018rem + 1.718vw, 3.4332rem);
+
+    --color-primary: #605ccc;
+    --color-primary-hover: #9b9bf2;
+    --color-navbar-gradient-start: #141414;
+    --color-navbar-gradient-end: #251a2e;
+}
+
+/* ===============================
+   LAYOUT CONTAINERS
+   =============================== */
+.content-container {
+    max-width: var(--grid-max-width);
+    padding-inline: var(--grid-gutter);
+    margin-inline: auto;
+}
+
+.navbar-container {
+    color: #fff;
+    background: linear-gradient(var(--color-navbar-gradient-start), var(--color-navbar-gradient-end));
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-container {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 2rem;
+    margin-block: 2rem;
+}
+
+.about-us-container img {
+    border-radius: 8px;
+}
+
+.establishments-section {
+    background-color: #fafafc;
+}
+
+.establishments {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-block: 4vh;
+}
+
+.establishment {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #f9fbfc;
+    box-shadow: 10px 10px 40px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.establishment p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.establishment img,
+.establishment iframe {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* ===============================
+   TEXT & TYPOGRAPHY
+   =============================== */
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+.establishment p {
+    font-size: var(--step-0);
+}
+
+.establishment a {
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: color 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.establishment a:hover,
+.establishment a:focus,
+.establishment a:active {
+    color: var(--color-primary-hover);
+    text-decoration: none;
+}
+
+/* ===============================
+   TOGGLE BUTTONS & DETAILS
+   =============================== */
+button.toggle-btn {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: background 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button.toggle-btn:hover {
+    background: var(--color-primary-hover);
+}
+
+.establishment .details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.establishment .details.show {
+    max-height: max-content;
+    opacity: 1;
+}
+
+.fundraiser.hide {
+    display: none;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background-color: #232323;
+    color: #fff;
+    text-align: center;
+}
+
+.header span {
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(233, 223, 170, 0.75);
+    margin-bottom: 0;
+}
+
+.header h2 {
+    margin-top: 0;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+.footer-container {
+    background-color: #141414;
+    color: #fff;
+    padding-block: 2rem;
+}
+
+.footer-container a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.footer-container a:hover,
+.footer-container a:active {
+    color: var(--color-primary-hover);
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 872px) {
+    .about-us-container {
+        grid-auto-flow: row;
+    }
+
+    .establishment {
+        grid-auto-flow: row;
+        justify-items: center;
+        max-width: 100%;
+    }
+
+    .establishment .text-info {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .establishment img,
+    .establishment iframe {
+        width: 100%;
+        height: auto;
+        justify-self: center;
+        max-width: 100%;
+        border-radius: 12px;
+        margin-bottom: 0.3rem;
+    }
+
+    button + a {
+        margin-top: 0.5rem;
+        display: block;
+    }
+}
