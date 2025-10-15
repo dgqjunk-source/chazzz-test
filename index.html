@@ -315,5 +315,26 @@
     }, 2000); // small delay to make sure images/fonts finish loading
   });
 </script>
+<script>
+if ('PerformanceObserver' in window) {
+  const po = new PerformanceObserver((entryList) => {
+    const entries = entryList.getEntries();
+    entries.forEach(entry => {
+      console.log('LCP element:', entry.element);
+      console.log('LCP value (ms):', entry.startTime);
+    });
+  });
+
+  po.observe({ type: 'largest-contentful-paint', buffered: true });
+
+  // Optional: stop observing after page load
+  window.addEventListener('load', () => {
+    po.disconnect();
+  });
+} else {
+  console.log('PerformanceObserver not supported');
+}
+</script>
+
 </body>
 </html>
