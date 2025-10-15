@@ -295,12 +295,25 @@
     console.log(metric.name, metric.value);
   }
 
-  // Call each metric function via webVitals namespace
+  // Measure all metrics
   webVitals.onCLS(logMetric);
   webVitals.onFID(logMetric);
-  webVitals.onLCP(logMetric);
   webVitals.onTTFB(logMetric);
   webVitals.onINP(logMetric);
+
+  // Continuously log LCP until the page fully settles
+  let lcpValue = 0;
+  webVitals.onLCP((metric) => {
+    lcpValue = metric.value;
+    console.log('LCP (current):', lcpValue);
+  });
+
+  // Optional: final LCP after everything has loaded
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      console.log('Final LCP:', lcpValue);
+    }, 3000); // wait a bit for images/fonts to render
+  });
 </script>
 </body>
 </html>
