@@ -175,28 +175,23 @@
     </footer>
 <script src="https://unpkg.com/web-vitals@3.3.1/dist/web-vitals.iife.js"></script>
 <script>
+  let finalLCP = null;
+
   function logMetric(metric) {
     console.log(metric.name, metric.value);
+    if(metric.name === 'LCP') finalLCP = metric.value;
   }
 
-  // Measure all metrics
+  // Start listening for metrics
   webVitals.onCLS(logMetric);
   webVitals.onFID(logMetric);
   webVitals.onTTFB(logMetric);
   webVitals.onINP(logMetric);
+  webVitals.onLCP(logMetric);
 
-  // Continuously log LCP until the page fully settles
-  let lcpValue = 0;
-  webVitals.onLCP((metric) => {
-    lcpValue = metric.value;
-    console.log('LCP (current):', lcpValue);
-  });
-
-  // Optional: final LCP after everything has loaded
   window.addEventListener('load', () => {
-    setTimeout(() => {
-      console.log('Final LCP:', lcpValue);
-    }, 3000); // wait a bit for images/fonts to render
+    // finalLCP now holds the last LCP value reported by the metric
+    console.log('Final LCP after load:', finalLCP);
   });
 </script>
 </body>
