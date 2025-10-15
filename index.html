@@ -22,8 +22,9 @@
     </noscript>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="src/styles/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+    <link defer rel="stylesheet" href="src/styles/style.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="shttps://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css"></noscript>
 
     
 
@@ -258,6 +259,8 @@
             <div class="openingstijden-content content-container">
                 <h3>Openingstijden</h3>
                 <ul>
+                    <li>Maandag: Gesloten</li>
+                    <li>Dinsdag: Gesloten</li>
                     <li>Woensdag: 16:00 – 22:00</li>
                     <li>Donderdag: 16:00 – 22:00</li>
                     <li>Vrijdag: 16:00 – 22:00</li>
