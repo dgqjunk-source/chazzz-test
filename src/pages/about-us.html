@@ -173,31 +173,26 @@
             </div>
         </div>
     </footer>
-<script src="https://unpkg.com/web-vitals@3.3.1/dist/web-vitals.iife.js"></script>
 <script>
-  let finalLCP = null;
-
-  function logMetric(metric) {
-    console.log(metric.name, metric.value);
-    if (metric.name === 'LCP') {
-      finalLCP = metric.value;
-      console.log('Captured LCP:', finalLCP);
-    }
-  }
-
-  // Listen for metrics as they happen
-  webVitals.onCLS(logMetric);
-  webVitals.onFID(logMetric);
-  webVitals.onTTFB(logMetric);
-  webVitals.onINP(logMetric);
-  webVitals.onLCP(logMetric);
-
-  // Wait for the page to fully load and all fonts/images to render
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      console.log('Final LCP after load + timeout:', finalLCP);
-    }, 2000); // small delay to make sure images/fonts finish loading
+if ('PerformanceObserver' in window) {
+  const po = new PerformanceObserver((entryList) => {
+    const entries = entryList.getEntries();
+    entries.forEach(entry => {
+      console.log('LCP element:', entry.element);
+      console.log('LCP value (ms):', entry.startTime);
+    });
   });
+
+  po.observe({ type: 'largest-contentful-paint', buffered: true });
+
+  // Optional: stop observing after page load
+  window.addEventListener('load', () => {
+    po.disconnect();
+  });
+} else {
+  console.log('PerformanceObserver not supported');
+}
+</script>
 </script>
 </body>
 </html>
