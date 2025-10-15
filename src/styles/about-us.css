@@ -201,7 +201,6 @@ button.toggle-btn {
     border: none;
     border-radius: 6px;
     padding: 0.5rem 1rem;
-    font-weight: 600;
     transition: background 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -273,7 +272,7 @@ button.toggle-btn:hover {
 /* ===============================
    RESPONSIVE
    =============================== */
-@media (max-width: 872px) {
+@media (max-width: 678px) {
     .about-us-container {
         grid-auto-flow: row;
     }

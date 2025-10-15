@@ -1,0 +1,209 @@
+.hero-container {
+    background-image: url("/assets/");
+    box-shadow: 0 120px 200px rgba(0,0,0,0.9) inset;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    height: 85vh;
+    display: grid;
+    gap: var(--grid-gutter);
+    color: white;
+    text-shadow: #090909 8px 8px 20px;
+}
+
+.hero-container p {
+    font-size: var(--step-0);
+}
+
+.about-us-section {
+    margin: 5vh auto 8vh auto;
+    max-height: max-content;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: var(--grid-gutter);
+}
+
+.about-content h2 {
+    margin-bottom: 2rem;
+}
+
+.text-container {
+    height: max-content
+}
+
+.about-content p {
+    font-size: var(--step-0);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.about-content > .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    gap: 0.25rem;
+}
+
+.image-container > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-container {
+    height: 70vh;
+    background: linear-gradient(#181818, #251a2e);
+}
+
+.image-collage {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.image-collage img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.mobile-carousel {
+    display: none;
+}
+
+.menukaarten-container span {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: gold;
+    font-size: var(--step--1);
+}
+
+.menukaarten-container h2 {
+    margin: 0;
+}
+
+.kaarten-header {
+    height: max-content;
+}
+
+.menukaarten-container {
+    margin: 3rem auto;
+    height: 80vh;
+    display: grid;
+    grid-auto-rows: 1fr 9fr;
+}
+
+.menu-kaart {
+    margin-top: 2rem;
+    border-radius: 10px;
+    background:#f9fbfc;
+    height: max-content;
+    width: clamp(40%, 50% + 1.75vw, 60%);
+    padding: 1rem;
+    display: grid;
+    align-items: stretch;
+    grid-auto-rows: 5fr 1fr 1fr;
+    box-shadow: 10px 10px 40px 3px rgba(0, 0, 0, 0.1);
+}
+
+.menu-kaart img {
+    border-radius: 12px;
+    width: 100%;
+    height: 40vh;
+    display: inline;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.menu-kaart a {
+    align-self: end;
+    text-decoration: underline;
+}
+
+.menukaarten {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(0.5rem, 1.25rem + 0.775vw, 2rem);
+}
+
+@media (max-width: 678px) {
+    .hero-container {
+        background-attachment: scroll;
+        box-shadow: 0 60px 100px rgba(0,0,0,0.7) inset;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        image-rendering: crisp-edges;
+    }
+
+    .navbar-content ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr; /* single column */
+        grid-template-rows: auto;   /* let text & images flow naturally */
+        gap: var(--grid-gutter);
+    }
+
+    .about-content > .image-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /* images adjust naturally */
+        gap: 0.25rem;
+    }
+
+    .image-collage {
+        display: none !important;
+    }
+
+    .carousel-container {
+        height: max-content;
+    }
+
+    .mobile-carousel {
+        display: flex !important;
+        align-items: center;
+        padding: 1rem;
+        width: 100vw;
+        height: 70vh;
+        margin-left: calc(50% - 50vw);
+        overflow: hidden;
+        border-radius: 0;
+    }
+
+    .splide__slide {
+        width: 100%;
+        height: 100%;
+    }
+
+    .splide__slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .menukaarten-container {
+        width: 100%;
+        height: max-content;
+    }
+
+    .menukaarten {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .menu-kaart {
+        width: 100%;
+    }
+}

@@ -118,6 +118,7 @@ h2 {
     height: 10vh;
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between; /* logo left, links right */
     align-items: center; /* vertically center both */
     max-width: var(--grid-max-width);
@@ -125,8 +126,12 @@ h2 {
     padding-inline: var(--grid-gutter);
 }
 
-/* Make sure the logo doesn’t have weird margins */
+.hamburger {
+    display: none;
+}
+
 .logo-container h1 {
+    font-size: var(--step-3);
     margin: 0;
     line-height: 1;
 }
@@ -145,249 +150,6 @@ h2 {
     text-decoration: none;
     font-size: var(--step-0);
     color: inherit;
-}
-
-
-.hero-container {
-    background-image: url("/assets/chazzzfood_hero.jpg");
-    box-shadow: 0 120px 200px rgba(0,0,0,0.9) inset;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    height: 85vh;
-    display: grid;
-    gap: var(--grid-gutter);
-    color: white;
-    text-shadow: #090909 8px 8px 20px;
-}
-
-.hero-container p {
-    font-size: var(--step-0);
-}
-
-.about-us-section {
-    margin: 5vh auto 8vh auto;
-    max-height: max-content;
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: var(--grid-gutter);
-}
-
-.about-content h2 {
-    margin-bottom: 2rem;
-}
-
-.text-container {
-    height: max-content
-}
-
-.about-content p {
-    font-size: var(--step-0);
-    margin: 0;
-    line-height: 1.5;
-}
-
-.about-content > .image-container {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 50%);
-    gap: 0.25rem;
-}
-
-.image-container > img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.carousel-container {
-    height: 70vh;
-    background: linear-gradient(#181818, #251a2e);
-}
-
-.image-collage {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.image-collage img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 0.5rem;
-}
-
-.mobile-carousel {
-    display: none;
-}
-
-.menukaarten-container span {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: gold;
-    font-size: var(--step--1);
-}
-
-.menukaarten-container h2 {
-    margin: 0;
-}
-
-.kaarten-header {
-    height: max-content;
-}
-
-.menukaarten-container {
-    margin: 3rem auto;
-    height: 80vh;
-    display: grid;
-    grid-auto-rows: 1fr 9fr;
-}
-
-.menu-kaart {
-    margin-top: 2rem;
-    border-radius: 10px;
-    background:#f9fbfc;
-    height: max-content;
-    width: clamp(40%, 50% + 1.75vw, 60%);
-    padding: 1rem;
-    display: grid;
-    align-items: stretch;
-    grid-auto-rows: 5fr 1fr 1fr;
-    box-shadow: 10px 10px 40px 3px rgba(0, 0, 0, 0.1);
-}
-
-.menu-kaart img {
-    border-radius: 12px;
-    width: 100%;
-    height: 40vh;
-    display: inline;
-    object-fit: cover;
-    z-index: 0;
-}
-
-.menu-kaart a {
-    align-self: end;
-    text-decoration: underline;
-}
-
-.menukaarten {
-    display: flex;
-    flex-direction: row;
-    gap: clamp(0.5rem, 1.25rem + 0.775vw, 2rem);
-}
-
-@media (max-width: 678px) {
-    .hero-container {
-        background-attachment: scroll;
-        box-shadow: 0 60px 100px rgba(0,0,0,0.7) inset;
-        -webkit-transform: translateZ(0);
-        image-rendering: crisp-edges;
-    }
-
-    .navbar-content ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-content {
-        display: grid;
-        grid-template-columns: 1fr; /* single column */
-        grid-template-rows: auto;   /* let text & images flow naturally */
-        gap: var(--grid-gutter);
-    }
-
-    .about-content > .image-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto; /* images adjust naturally */
-        gap: 0.25rem;
-    }
-
-    .image-collage {
-        display: none !important;
-    }
-
-    .carousel-container {
-        height: max-content;
-    }
-
-    .mobile-carousel {
-        display: flex !important;
-        align-items: center;
-        padding: 1rem;
-        width: 100vw;
-        height: 70vh;
-        margin-left: calc(50% - 50vw);
-        overflow: hidden;
-        border-radius: 0;
-    }
-
-    .splide__slide {
-        width: 100%;
-        height: 100%;
-    }
-
-    .splide__slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-
-    .menukaarten-container {
-        width: 100%;
-        height: max-content;
-    }
-
-    .menukaarten {
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .menu-kaart {
-        width: 100%;
-    }
-
-    footer.footer-container > .footer-content {
-        display: flex !important;        /* ensure flex is applied */
-        flex-direction: column !important; /* stack vertically */
-        align-items: center !important;    /* center horizontally */
-        justify-content: center !important;
-        gap: 2rem !important;
-    }
-
-    /* Center each inner section */
-    footer .contact-content,
-    footer .openingstijden-content,
-    footer .chazzz-logo {
-        text-align: center;
-        margin: 0 auto; /* ensure centered in flex container */
-    }
-
-    /* Stack social icons horizontally */
-    footer .contact-content ul {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 1rem !important;
-        padding: 0;
-        margin: 0.5rem 0 0 0;
-    }
-
-    /* Make opening hours list vertical */
-    footer .openingstijden-content ul {
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 0;
-        list-style: none;
-    }
 }
 
 footer.footer-container {
@@ -475,4 +237,98 @@ footer.footer-container > .footer-content {
     margin: 0.5rem 0; /* space before/after lists */
     padding: 0;
     list-style: none;
+}
+
+@media (max-width: 678px) {
+    .navbar-content ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer.footer-container > .footer-content {
+        display: flex !important;        /* ensure flex is applied */
+        flex-direction: column !important; /* stack vertically */
+        align-items: center !important;    /* center horizontally */
+        justify-content: center !important;
+        gap: 2rem !important;
+    }
+
+    /* Center each inner section */
+    footer .contact-content,
+    footer .openingstijden-content,
+    footer .chazzz-logo {
+        text-align: center;
+        margin: 0 auto; /* ensure centered in flex container */
+    }
+
+    /* Stack social icons horizontally */
+    footer .contact-content ul {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        padding: 0;
+        margin: 0.5rem 0 0 0;
+    }
+
+    /* Make opening hours list vertical */
+    footer .openingstijden-content ul {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0;
+        list-style: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    } 
+
+    .hamburger ion-icon {
+        position: fixed;
+        top: 1.35rem;
+        right: 1rem;
+        z-index: 1100 !important;
+        font-size: 2rem;
+        color: white;
+    }
+
+        /* Mobile full-screen sidebar menu */
+    .page-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75%;
+        height: 100vh;
+        background-color: #181818;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0;
+        
+        transform: translateX(100%);
+        transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 1000;
+    }
+
+    .page-list.active {
+        transform: translateX(0); /* slide in */
+    }
+
+    .nav-link {
+        font-size: var(--step-3);
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .hamburger.active {
+        display: block !important;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    body.no-scroll {
+        position: fixed;
+    }
 }
