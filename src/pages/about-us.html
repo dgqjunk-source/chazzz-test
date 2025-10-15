@@ -16,6 +16,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
     </noscript>
     <script defer src="/src/scripts/toggleButton.js"></script>
+    <script type="module">
+  import {getLCP, getCLS, getINP, getTTFB} from 'https://unpkg.com/web-vitals?module';
+  function report({name, value}) {
+    console.log(`${name}: ${value.toFixed(2)} ms`);
+  }
+  getLCP(report);
+  getCLS(report);
+  getINP(report);
+  getTTFB(report);
+</script>
 </head>
 <body>
     <header class="navbar-container">
@@ -111,8 +121,6 @@
                                 <li>Zaterdag: 16:00 – 22:00</li>
                                 <li>Zondag: 16:00 – 22:00</li>
                             </ul>
-                            <button class="toggle-btn" aria-expanded="false">Meer info</button>
-                            <iframe class="details" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1232.346768381173!2d5.8672473!3d51.84829244921207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7a52bf1181a25%3A0xe3890ca9140d6cf6!2sChazzz%20Food%20Nijmegen%20(Mas)!5e0!3m2!1sen!2snl!4v1760530747288!5m2!1sen!2snl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </article>
 
@@ -133,7 +141,7 @@
                             </ul>
                         </div>
                         <div class="establishment-image">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1232.346768381173!2d5.8672473!3d51.84829244921207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7a52bf1181a25%3A0xe3890ca9140d6cf6!2sChazzz%20Food%20Nijmegen%20(Mas)!5e0!3m2!1sen!2snl!4v1760530747288!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1232.346768381173!2d5.8672473!3d51.84829244921207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7a52bf1181a25%3A0xe3890ca9140d6cf6!2sChazzz%20Food%20Nijmegen%20(Mas)!5e0!3m2!1sen!2snl!4v1760530747288!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         </div>
                     </article>
                 </div>
