@@ -179,19 +179,24 @@
 
   function logMetric(metric) {
     console.log(metric.name, metric.value);
-    if(metric.name === 'LCP') finalLCP = metric.value;
+    if (metric.name === 'LCP') {
+      finalLCP = metric.value;
+      console.log('Captured LCP:', finalLCP);
+    }
   }
 
-  // Start listening for metrics
+  // Listen for metrics as they happen
   webVitals.onCLS(logMetric);
   webVitals.onFID(logMetric);
   webVitals.onTTFB(logMetric);
   webVitals.onINP(logMetric);
   webVitals.onLCP(logMetric);
 
+  // Wait for the page to fully load and all fonts/images to render
   window.addEventListener('load', () => {
-    // finalLCP now holds the last LCP value reported by the metric
-    console.log('Final LCP after load:', finalLCP);
+    setTimeout(() => {
+      console.log('Final LCP after load + timeout:', finalLCP);
+    }, 2000); // small delay to make sure images/fonts finish loading
   });
 </script>
 </body>
