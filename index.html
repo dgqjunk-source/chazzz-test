@@ -31,16 +31,6 @@
     <!-- Ionicons (optimized loading) -->
     <script type="module" defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script type="module">
-  import {getLCP, getCLS, getINP, getTTFB} from 'https://unpkg.com/web-vitals?module';
-  function report({name, value}) {
-    console.log(`${name}: ${value.toFixed(2)} ms`);
-  }
-  getLCP(report);
-  getCLS(report);
-  getINP(report);
-  getTTFB(report);
-</script>
     <style>
     :root {
         --grid-max-width: 72.5rem;
@@ -299,5 +289,18 @@
         }).mount();
         });
     </script>
+<script src="https://unpkg.com/web-vitals@3.3.1/dist/web-vitals.iife.js"></script>
+<script>
+  function logMetric(metric) {
+    console.log(metric.name, metric.value);
+  }
+
+  // Call each metric function via webVitals namespace
+  webVitals.onCLS(logMetric);
+  webVitals.onFID(logMetric);
+  webVitals.onLCP(logMetric);
+  webVitals.onTTFB(logMetric);
+  webVitals.onINP(logMetric);
+</script>
 </body>
 </html>
