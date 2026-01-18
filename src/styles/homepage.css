@@ -33,7 +33,7 @@
 }
 
 .text-container {
-    height: max-content
+    height: max-content;
 }
 
 .about-content p {
@@ -49,24 +49,26 @@
 
 .about-content > .image-container {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.25rem;
+
+    aspect-ratio: 1 / 1;
 }
 
-.image-container > img {
+
+.image-container img {
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
 
 .carousel-container {
-    min-height: 70vh;
+    height: 70vh;
     background: linear-gradient(#181818, #251a2e);
 }
 
 .image-collage {
-    height: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
@@ -76,7 +78,6 @@
 .image-collage img {
     width: 100%;
     aspect-ratio: 1 / 1;
-    min-height: 0;
     object-fit: cover;
     border-radius: 0.5rem;
 }
@@ -102,7 +103,8 @@
 
 .menukaarten-container {
     margin: 3rem auto;
-    height: 80vh;
+    /* height: 80vh; */
+    grid-template-rows: auto 1fr; /* allow content to size naturally */
     display: grid;
     grid-auto-rows: 1fr 9fr;
 }
