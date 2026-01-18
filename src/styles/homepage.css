@@ -1,5 +1,5 @@
 .hero-container {
-    background-image: url("/assets/");
+    background-image: url("src/assets/");
     box-shadow: 0 120px 200px rgba(0,0,0,0.9) inset;
     background-size: cover;
     background-position: center;

@@ -260,9 +260,12 @@ button.toggle-btn:hover {
 }
 
 .footer-container a {
-    color: var(--color-primary);
     text-decoration: none;
 }
+
+.footer-container .phone-number a {
+  text-decoration: underline;
+} 
 
 .footer-container a:hover,
 .footer-container a:active {
