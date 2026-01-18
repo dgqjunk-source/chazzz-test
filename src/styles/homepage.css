@@ -149,6 +149,7 @@
     }
 
     .about-content {
+      height: max-content;
         display: grid;
         grid-template-columns: 1fr; /* single column */
         grid-template-rows: auto;   /* let text & images flow naturally */

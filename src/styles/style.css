@@ -169,6 +169,10 @@ footer.footer-container > .footer-content {
     justify-items: center;
 }
 
+.footer-content .phone-number a {
+  text-decoration: underline;
+}
+
 .chazzz-logo-img {
     grid-column: 2;
     grid-row: 1;

@@ -30,6 +30,7 @@
 .map-container iframe {
     width: 35vw;
     height: 50vh;
+    align-self: right;
 }
 
 @media (max-width: 678px) {
