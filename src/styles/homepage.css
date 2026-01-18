@@ -42,6 +42,11 @@
     line-height: 1.5;
 }
 
+.about-content a {
+    text-decoration: underline;
+
+}
+
 .about-content > .image-container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -149,7 +154,7 @@
     }
 
     .about-content {
-      height: max-content;
+        height: max-content;
         display: grid;
         grid-template-columns: 1fr; /* single column */
         grid-template-rows: auto;   /* let text & images flow naturally */
