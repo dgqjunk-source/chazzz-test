@@ -61,12 +61,12 @@
 }
 
 .carousel-container {
-    height: 70vh;
+    min-height: 70vh;
     background: linear-gradient(#181818, #251a2e);
 }
 
 .image-collage {
-    height: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
@@ -76,6 +76,7 @@
 .image-collage img {
     width: 100%;
     aspect-ratio: 1 / 1;
+    min-height: 0;
     object-fit: cover;
     border-radius: 0.5rem;
 }
