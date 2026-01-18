@@ -103,7 +103,6 @@
 
 .menukaarten-container {
     margin: 3rem auto;
-    /* height: 80vh; */
     grid-template-rows: auto 1fr; /* allow content to size naturally */
     display: grid;
     grid-auto-rows: 1fr 9fr;

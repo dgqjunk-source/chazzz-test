@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserveren | Chazzz</title>
+    <title>Reserveren | Chazzz</title>    <!-- Meta tags -->
+    <meta name="description" content="Chazzz Food - Tasty Caribbean & Latin food in Arnhem and Nijmegen. Discover our menu, opening hours, and locations.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Chazzz Food">
+    <meta property="og:description" content="Tasty Caribbean & Latin food in Arnhem and Nijmegen.">
+    <meta property="og:image" content="src/assets/chazzzz.png">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="/src/styles/reserve.css">
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <script type="module" defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule defer src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script defer src="/src/scripts/menu.js"></script>
+
 </head>
 <body>
-    
+  <header class="navbar-container">
+      <div class="content-container navbar-content">
+          <div class="logo-container">
+              <h1>Chazzz</h1>
+          </div>
+          <nav class="pages-container" aria-label="Hoofdmenu">
+              <div class="hamburger"><ion-icon name="menu-outline"></ion-icon></div>
+              <ul class="page-list">
+                  <li class="nav-link"><a href="/index.html">Home</a></li>
+                  <li class="nav-link"><a href="/src/pages/about-us.html">Over ons</a></li>
+                  <li class="nav-link"><a href="/index.html#menu">Menu</a></li>
+                  <li class="nav-link"><a href="/src/pages/contact.html">Contact</a></li>
+                  <li class="nav-link"><a href="/src/pages/reserve.html">Reserveren</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  <main id="reserve-table-section">
+      <div class="reserve-container content-container">
+          <div class="reserve-table-container">
+              <p>Nog geen content</p>
+          </div>
+      </div>
+  </main>
+  <footer class="footer-container">
+      <div class="footer-content content-container">
+          <div class="chazzz-logo-img">
+              <img src="/src/assets/chazzzz.png" alt="Chazzz logo">
+          </div>
+          <div class="contact-content content-container">
+              <h3>CHAZZZ FOOD</h3>
+              <span>Locaties/contact</span>
+              <p class="address">Nijmegen: <br> Waalkade 65<br>6511 XP Nijmegen</p>
+              <p class="phone-number">Telefoonnummer: <br><a href="tel:+31622314991">06 22314991</a></p>
+              <ul class="social-menu">
+                  <li><a href="https://instagram.com/chazzz_food_nijmegen" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                  <li><a href="https://www.facebook.com/Chazzzfood/" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              </ul>
+          </div>
+          <div class="opening-hours-content content-container">
+              <h3>Openingstijden</h3>
+              <ul>
+                  <li>Maandag: 17:00 - 21:00</li>
+                  <li>Dinsdag: Gesloten</li>
+                  <li>Woensdag: 16:00 – 22:00</li>
+                  <li>Donderdag: 17:00 – 22:00</li>
+                  <li>Vrijdag: 13:00 – 22:00</li>
+                  <li>Zaterdag: 13:00 – 22:00</li>
+                  <li>Zondag: 13:00 – 21:00</li>
+              </ul>
+          </div>
+          <div class="credits content-container">
+              <p>Chazzz Food</p>
+              <p>made by Devon</p>
+          </div>
+      </div>
+  </footer>
 </body>
 </html>

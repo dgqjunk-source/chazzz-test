@@ -284,19 +284,21 @@ footer.footer-container > .footer-content {
 
     .hamburger {
         display: block;
-        cursor: pointer;
-    } 
-
-    .hamburger ion-icon {
         position: absolute;
         top: 1.35rem;
         right: 1rem;
-        z-index: 1100 !important;
-        font-size: 2rem;
-        color: white;
+        z-index: 1100;
+        cursor: pointer;
+        font-size: 2rem; /* affects the ion-icon inside */
+        color: white; /* optional, will inherit by ion-icon */    
+    } 
+
+    .hamburger ion-icon {
+        font-size: inherit; /* use the parent size */
+        color: inherit;     /* use the parent color */    
     }
 
-        /* Mobile full-screen sidebar menu */
+    /* Mobile full-screen sidebar menu */
     .page-list {
         position: fixed;
         top: 0;

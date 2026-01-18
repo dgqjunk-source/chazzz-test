@@ -1,0 +1,25 @@
+.navbar-content {
+    color: black;
+}
+
+.hamburger {
+  filter: invert();
+}
+
+.page-list.active + .hamburger,
+body.no-scroll .hamburger {
+    filter: invert(0); /* black / normal color */
+}
+
+#reserve-table-section {
+  min-height: 60vh;
+}
+
+
+.reserve-table-container {
+    border-radius: 8px;
+    box-shadow: 10px 10px 40px 3px rgba(0, 0, 0, 0.2);
+    min-width: 80%;
+    padding: 2rem;
+    background-color: white;
+}
