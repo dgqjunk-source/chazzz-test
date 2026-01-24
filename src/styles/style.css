@@ -177,8 +177,11 @@ footer.footer-container > .footer-content {
     grid-column: 2;
     grid-row: 1;
     width: 100%;
-    align-self: center;
-    margin-left: 2rem;
+}
+
+.chazzz-logo-img img {
+  justify-self: center;
+  align-self: center;
 }
 
 .credits {
@@ -224,21 +227,21 @@ footer.footer-container > .footer-content {
 }
 
 .footer-content > div {
-    margin-bottom: 2rem; /* space between footer sections */
+    margin-bottom: 2rem;
 }
 
 .footer-content h3 {
-    margin-bottom: 0.75rem; /* space after each heading */
+    margin-bottom: 0.75rem;
 }
 
 .footer-content p,
 .footer-content span,
 .footer-content a {
-    margin-bottom: 0.5rem; /* space after text lines and links */
+    margin-bottom: 0.5rem;
 }
 
 .footer-content ul {
-    margin: 0.5rem 0; /* space before/after lists */
+    margin: 0.5rem 0;
     padding: 0;
     list-style: none;
 }
@@ -250,34 +253,33 @@ footer.footer-container > .footer-content {
     }
 
     footer.footer-container > .footer-content {
-        display: flex !important;        /* ensure flex is applied */
-        flex-direction: column !important; /* stack vertically */
-        align-items: center !important;    /* center horizontally */
-        justify-content: center !important;
-        gap: 2rem !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
     }
 
-    /* Center each inner section */
+
     footer .contact-content,
     footer .openingstijden-content,
     footer .chazzz-logo {
         text-align: center;
-        margin: 0 auto; /* ensure centered in flex container */
+        margin: 0 auto;
     }
 
-    /* Stack social icons horizontally */
+   
     footer .contact-content ul {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 1rem !important;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
         padding: 0;
         margin: 0.5rem 0 0 0;
     }
 
-    /* Make opening hours list vertical */
     footer .openingstijden-content ul {
-        display: flex !important;
-        flex-direction: column !important;
+        display: flex;
+        flex-direction: column;
         padding: 0;
         list-style: none;
     }
@@ -289,13 +291,13 @@ footer.footer-container > .footer-content {
         right: 1rem;
         z-index: 1100;
         cursor: pointer;
-        font-size: 2rem; /* affects the ion-icon inside */
-        color: white; /* optional, will inherit by ion-icon */    
+        font-size: 2rem;
+        color: white;
     } 
 
     .hamburger ion-icon {
-        font-size: inherit; /* use the parent size */
-        color: inherit;     /* use the parent color */    
+        font-size: inherit;
+        color: inherit;
     }
 
     /* Mobile full-screen sidebar menu */
@@ -318,7 +320,7 @@ footer.footer-container > .footer-content {
     }
 
     .page-list.active {
-        transform: translateX(0); /* slide in */
+        transform: translateX(0); /* slide in transition */
     }
 
     .nav-link {
@@ -328,7 +330,7 @@ footer.footer-container > .footer-content {
     }
 
     .hamburger.active {
-        display: block !important;
+        display: block;
         cursor: pointer;
         z-index: 1100;
     }
